@@ -80,10 +80,11 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgres',
         'NAME': 'wisp_chat',
-        'USER': 'root',
-        'PASSWORD': 'Kingdraw@77',
+        'USER': 'postgres',
+        'PASSWORD': 'idman',
+        'PORT': 3453,
         'HOST': 'localhost',
 
 
