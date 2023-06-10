@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from rest_framework import status
 from rest_framework.response import Response
 
 from rest_framework.views import APIView
@@ -16,4 +17,4 @@ class Register(APIView):
         serializers = UserSerializer(data=request.data)
         if serializers.is_valid(raise_exception=True):
             serializers.save()
-        return Response(serializers.data)
+        return Response("registration successful",status=status.HTTP_201_CREATED)
